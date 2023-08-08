@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose =  require("mongoose");
 const studModel = require("./models/studentModel.js");
 const studcntr = require("./controllers/studentControlle.js");
+const cors =  require("cors");
 //create app
 const app = express();
 
@@ -10,6 +11,7 @@ require('dotenv').config();
 
 //to get json data from body 
 app.use(express.json());
+app.use(cors());
 
 //mongoDB Connection
 mongoose.connect(process.env.Mongo_URL).then( ()=>{

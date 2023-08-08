@@ -38,9 +38,23 @@ module.exports =  onFind = (req,res)=>{
 module.exports =  onUpdate = (req,res) => {
     var filter = req.body.filter;
     var data = req.body.info;
-    // res.send(filter, data);
+    // res.send(data);
     // res.send(req.body.info);
     studModel.updateOne(filter,data)
+    .then(result => {
+        res.send(result);
+    })
+    .catch(err => {
+        console.log("error accured-->",err);
+    });
+
+    // res.send("Getting PUT request");
+}
+
+
+//Create Delete Endpoint
+module.exports =  onDelete = (req,res) => {
+    studModel.deleteOne(req.body)
     .then(result => {
         res.send(result);
     })
@@ -48,19 +62,5 @@ module.exports =  onUpdate = (req,res) => {
         console.log(err);
     });
 
-    res.send("Getting PUT request");
-}
-
-
-//Create Delete Endpoint
-module.exports =  onDelete = (req,res) => {
-    studModel.deleteOne({name: "Ayush"})
-    .then(() => {
-        res.send("Ayush Deleted");
-    })
-    .catch(err => {
-        console.log(err);
-    });
-
-    onFind();
+    // onFind();
 } 

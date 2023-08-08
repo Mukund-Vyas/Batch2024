@@ -2,7 +2,7 @@
     --red: hsl(0, 78%, 62%);
     --cyan: hsl(180, 62%, 55%);
     --orange: hsl(34, 97%, 64%);
-    --blue: hsl(212, 86%, 64%);
+    --blue: hsl(213, 87%, 91%);
     --varyDarkBlue: hsl(234, 12%, 34%);
     --grayishBlue: hsl(229, 6%, 66%);
     --veryLightGray: hsl(0, 0%, 98%);
@@ -79,7 +79,7 @@ h3 {
         border-radius: 15px;
         margin: 5px;
         margin-top: 70px;
-        padding: 30px 30px;
+        padding: 75px 25px 25px 25px;
         position: relative;
         box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.2);
     }
@@ -105,7 +105,7 @@ h3 {
         border-radius: 15px;
         margin: 5px;
         margin-top: 70px;
-        padding: 30px 30px;
+        padding: 75px 25px 25px 25px;
         position: relative;
         box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.2);
     }
@@ -130,7 +130,7 @@ h2 {
 
 @media (min-width: 950px) {
     .box {
-        width: 85%;
+        width: 86%;
         background-color: #fdfaff;
         border-top: 3px solid var(--orange);
         height: auto;
